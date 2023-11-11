@@ -264,7 +264,7 @@ export default [
 		"image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Frimaire_commence_le_22_novembre.jpg",
 		"description": "Période des froids",
 		"notes": [
-			"Terminaison en -aire pour les mois d'automne, du latin -arius, suffixe adjectival",
+			"Les mois d'automne terminent en -aire, du latin -arius, suffixe adjectival",
 		],
 		"days": [
 			{
@@ -654,7 +654,7 @@ export default [
 		"image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vent%C3%B4se_commence_le_20_ou_21_f%C3%A9vrier.jpg",
 		"description": "Période des vents",
 		"notes": [
-			"Terminaison en -ôse pour les mois d'hiver, du latin -osus, « doté de »",
+			"Les mois d'hiver terminent en -ôse, du latin -osus, « doté de »",
 		],
 		"days": [
 			{
@@ -784,7 +784,7 @@ export default [
 		"image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Germinal_commence_le_21_ou_22_mars.jpg",
 		"description": "Période de la germination",
 		"notes": [
-			"Terminaison en -al pour les mois du printemps, du latin -alis, suffixe adjectival",
+			"Les mois du printemps terminent en -al, du latin -alis, suffixe adjectival",
 		],
 		"days": [
 			{
@@ -1430,7 +1430,7 @@ export default [
 		"image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Fructidor_commence_le_21_ou_22_ao%C3%BBt.jpg",
 		"description": "Période des fruits",
 		"notes": [
-			"Terminaison en -idor pour les mois d'été, du grec dôron, « don »",
+			"Les mois d'été terminent en -idor, du grec dôron, « don »",
 		],
 		"days": [
 			{
