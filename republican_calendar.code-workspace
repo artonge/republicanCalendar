@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"Apocyn",
+			"Asaret",
+			"cembre",
+			"Chalemie",
+			"Chamérisier",
+			"Doronic",
+			"Ellébore",
+			"gregorian",
+			"Macjonc",
+			"Mâcre",
+			"Mézéréon",
+			"miaire",
+			"Orcanète",
+			"Pluvi",
+			"Sucrion",
+			"Tagette",
+			"Thymèle",
+			"Trainasse",
+			"uselang",
+			"vrier",
+			"wikimedia"
+		],
+		"vue3snippets.enable-compile-vue-file-on-did-save-code": false
+	}
+}
