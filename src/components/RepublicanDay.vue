@@ -11,6 +11,7 @@ const { day, month, calendar, republicanYear } = defineProps<{
 	republicanYear: number
 }>()
 
+// Ref: https://fr.wikipedia.org/wiki/Concordance_des_dates_des_calendriers_r%C3%A9publicain_et_gr%C3%A9gorien#Conversion_avec_un_tableur
 // TODO: why -6 ?
 const dayOfMonth = day.day - 6
 const monthNb = calendar.findIndex(_month => _month.name === month.name)
