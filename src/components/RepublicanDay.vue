@@ -22,7 +22,6 @@ const x = dayOfMonth +
 	(monthNb - 1) * 30 +
 	365 * (republicanYear - 1) + Math.round(republicanYear / 4) + 106917
 
-// debugger
 const gregorianDate = addYears(addDays(refDate, x), -400)
 const gregorianDateString = format(gregorianDate, 'dd/MM/yyyy')
 
