@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import calendar from "../calendar";
+import { isSextile, romanNumeral } from "../utils";
 import RepublicanMonth from "./RepublicanMonth.vue";
 
-const { currentYear } = defineProps<{
-	currentYear: number
+const { currentGregorianYear } = defineProps<{
+	currentGregorianYear: number
 }>()
 
-const republicanYear = currentYear - 1791
+const republicanYear = currentGregorianYear - 1791
+
+if (!isSextile(republicanYear)) {
+	calendar[calendar.length - 1].days.pop()
+}
+
 </script>
 
 <template>
 	<div id="calendar">
-		<div id="couverture">
+		<div id="couverture" class="A4-page">
 			<img src="pictures/couverture.jpg">
 
 			<h1>Calendrier Républicain</h1>
-			<h2>de l'An MMXXIV ({{ currentYear - 1791 }})</h2>
-			<i>du 22 septembre {{ currentYear }} au 22 septembre {{ currentYear + 1 }}</i>
+			<h2>de l'An {{ romanNumeral(republicanYear) }} ({{ republicanYear }})</h2>
+			<i>du 22 septembre {{ currentGregorianYear }} au 21 septembre {{ currentGregorianYear + 1 }}</i>
 		</div>
 		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
 			:republicanYear="republicanYear"></RepublicanMonth>
@@ -25,19 +31,14 @@ const republicanYear = currentYear - 1791
 
 <style lang="scss" scoped>
 #couverture {
-	margin: 4px;
-	width: 29.7cm;
-	height: 21cm;
 	padding: 1cm 2cm;
 	box-sizing: border-box;
-	display: flex;
 	flex-direction: column;
 	align-content: center;
-	background-color: #faecd2;
 
 	img {
 		flex-grow: 1;
-		height: 100%;
+		height: 0;
 		object-fit: contain;
 	}
 

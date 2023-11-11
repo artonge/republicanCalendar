@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 import { type Calendar, type Month } from '../models'
 import RepublicanDay from './RepublicanDay.vue'
 
@@ -13,22 +11,27 @@ defineProps<{
 
 <template>
 	<div class="month">
-		<div class="month__image" v-if="month.image">
+		<div class="month__image A4-page" v-if="month.image !== undefined">
 			<img :src="month.image" alt="">
 		</div>
-		<div class="month__grid">
-			<div class="month__grid__month_name">{{ month.name }}</div>
-			<div class="month__grid__days_name" v-if="month.days.length === 30">
+		<div class="month__grid A4-page">
+			<div class="month__grid__month_title">
+				<div class="month__grid__month_name">{{ month.name }}</div>
+				<div class="month__grid__month_description" v-if="month.description !== undefined">
+					{{ month.description }}
+				</div>
+			</div>
+			<div class="month__grid__days_name">
 				<div class="month__grid__days_name__day">Primidi</div>
 				<div class="month__grid__days_name__day">Duodi</div>
 				<div class="month__grid__days_name__day">Tridi</div>
 				<div class="month__grid__days_name__day">Quartidi</div>
 				<div class="month__grid__days_name__day">Quintidi</div>
-				<div class="month__grid__days_name__day">Sextidi</div>
-				<div class="month__grid__days_name__day">Septidi</div>
-				<div class="month__grid__days_name__day">Octidi</div>
-				<div class="month__grid__days_name__day">Nonidi</div>
-				<div class="month__grid__days_name__day">Décadi</div>
+				<div class="month__grid__days_name__day" v-if="month.days.length > 5">Sextidi</div>
+				<div v-if="month.days.length === 30" class="month__grid__days_name__day">Septidi</div>
+				<div v-if="month.days.length === 30" class="month__grid__days_name__day">Octidi</div>
+				<div v-if="month.days.length === 30" class="month__grid__days_name__day">Nonidi</div>
+				<div v-if="month.days.length === 30" class="month__grid__days_name__day">Décadi</div>
 			</div>
 			<div class="month__grid__days">
 				<div class="month__grid__days__row">
@@ -47,6 +50,9 @@ defineProps<{
 					</RepublicanDay>
 				</div>
 			</div>
+			<div class="month__notes" v-if="month.notes.length !== 0">
+				<p v-for="note in month.notes" :key="note">{{ note }}</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -54,29 +60,30 @@ defineProps<{
 <style lang="scss" scoped>
 .month {
 	&__image {
-		margin: 4px;
-		width: 29.7cm;
-		height: 21cm;
-		box-sizing: border-box;
-		display: flex;
 		justify-content: center;
-		background-color: #faecd2;
 	}
 
 	&__grid {
-		margin: 4px;
-		width: 29.7cm;
-		height: 21cm;
 		padding: 1cm;
-		box-sizing: border-box;
-		display: flex;
 		flex-direction: column;
-		background-color: #faecd2;
+
+		&__month_title {
+			margin-bottom: 16px;
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
 
 		&__month_name {
-			margin-bottom: 4px;
-			font-size: 24px;
 			font-weight: bold;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&__month_description {
+			font-style: italic;
+			font-size: 16px;
+			line-height: 16px;
 		}
 
 		&__days_name {
@@ -93,12 +100,12 @@ defineProps<{
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
-			border-spacing: 0;
 			flex-grow: 1;
 
 			&__row {
 				display: flex;
 				flex-grow: 1;
+				height: 0;
 			}
 
 			&__cell {
@@ -133,6 +140,14 @@ defineProps<{
 			&__row:last-child &__cell:last-child {
 				border-bottom-right-radius: 8px;
 			}
+		}
+	}
+
+	&__notes {
+		margin-top: 12px;
+
+		p {
+			margin-top: 4px;
 		}
 	}
 }

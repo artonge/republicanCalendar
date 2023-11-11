@@ -10,7 +10,9 @@ export type Day = {
 
 export type Month = {
 	name: string,
-	image: string,
+	image?: string,
+	description?: string,
+	notes: string[],
 	days: Day[],
 }
 

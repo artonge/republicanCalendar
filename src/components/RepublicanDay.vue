@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import { set, addDays, addYears, format } from 'date-fns'
-
+import { getGregorianDate } from "../utils";
 import type { Day, Month, Calendar } from '../models'
 
 const { day, month, calendar, republicanYear } = defineProps<{
@@ -11,20 +9,11 @@ const { day, month, calendar, republicanYear } = defineProps<{
 	republicanYear: number
 }>()
 
-// Ref: https://fr.wikipedia.org/wiki/Concordance_des_dates_des_calendriers_r%C3%A9publicain_et_gr%C3%A9gorien#Conversion_avec_un_tableur
-// TODO: why -6 ?
-const dayOfMonth = day.day - 6
-const monthNb = calendar.findIndex(_month => _month.name === month.name)
-
-const refDate = set(new Date(), { date: 1, month: 1, year: 1900 })
-
-const x = dayOfMonth +
-	(monthNb - 1) * 30 +
-	365 * (republicanYear - 1) + Math.round(republicanYear / 4) + 106917
-
-const gregorianDate = addYears(addDays(refDate, x), -400)
-const gregorianDateString = format(gregorianDate, 'dd/MM/yyyy')
-
+const gregorianDate = getGregorianDate(
+	day.day,
+	calendar.findIndex(_month => _month.name === month.name) + 1,
+	republicanYear
+)
 </script>
 
 <template>
@@ -36,7 +25,7 @@ const gregorianDateString = format(gregorianDate, 'dd/MM/yyyy')
 			{{ day.name }}
 		</div>
 		<small class="day__gregorian">
-			({{ gregorianDateString }})
+			({{ gregorianDate }})
 		</small>
 	</div>
 </template>
