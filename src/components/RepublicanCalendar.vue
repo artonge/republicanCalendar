@@ -29,7 +29,6 @@ const republicanYear = currentYear - 1791
 	width: 29.7cm;
 	height: 21cm;
 	padding: 1cm 2cm;
-	border: 2px solid green;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;

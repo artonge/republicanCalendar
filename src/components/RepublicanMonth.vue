@@ -57,11 +57,10 @@ defineProps<{
 		margin: 4px;
 		width: 29.7cm;
 		height: 21cm;
-		border: 2px solid green;
 		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
-		// background-color: #faecd2;
+		background-color: #faecd2;
 	}
 
 	&__grid {
@@ -69,11 +68,10 @@ defineProps<{
 		width: 29.7cm;
 		height: 21cm;
 		padding: 1cm;
-		border: 2px solid green;
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
-		// background-color: #faecd2;
+		background-color: #faecd2;
 
 		&__month_name {
 			margin-bottom: 4px;
