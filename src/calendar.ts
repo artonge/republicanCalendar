@@ -1,7 +1,7 @@
 export default [
 	{
 		"name": "Vendémiaire",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Vend%C3%A9miaire_commence_le_22_septembre.jpg",
+		"image": "vendemiaire.jpg",
 		"description": "Période des vendanges",
 		"notes": [
 			"Cette période correspond à la saison des vendanges dans l'hémisphère nord. Bien que ses concepteurs l'aient voulu universel, le calendrier républicain était très influencé par le monde rural français.",
@@ -131,7 +131,7 @@ export default [
 	},
 	{
 		"name": "Brumaire",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Brumaire_commence_le_23_octobre.jpg",
+		"image": "brumaire.jpg",
 		"description": "Période des brumes et des brouillards",
 		"notes": [
 			"Ce mois a donné son nom au coup d'État, intervenu le 18 brumaire an VIII (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire (nom propre, avec majuscule à la deuxième partie du nom), mais également de Brumaire (là aussi avec une majuscule, pour distinguer du nom du mois en général)."
@@ -261,7 +261,7 @@ export default [
 	},
 	{
 		"name": "Frimaire",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Frimaire_commence_le_22_novembre.jpg",
+		"image": "frimaire.jpg",
 		"description": "Période des froids",
 		"notes": [
 			"Les mois d'automne terminent en -aire, du latin -arius, suffixe adjectival",
@@ -391,7 +391,7 @@ export default [
 	},
 	{
 		"name": "Nivôse",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Niv%C3%B4se_commence_le_22_d%C3%A9cembre.jpg",
+		"image": "nivose.jpg",
 		"description": "Période de la neige",
 		"notes": [
 			"Du latin nix, nivis « neige »"
@@ -521,7 +521,7 @@ export default [
 	},
 	{
 		"name": "Pluviôse",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Pluvi%C3%B4se_commence_le_21_ou_22_janvier.jpg",
+		"image": "pluviose.jpg",
 		"description": "Période des pluies",
 		"notes": [
 			"Le nom de ce mois a été rendu célèbre par le sonnet de Charles Baudelaire Spleen I, des Fleurs du mal."
@@ -651,7 +651,7 @@ export default [
 	},
 	{
 		"name": "Ventôse",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vent%C3%B4se_commence_le_20_ou_21_f%C3%A9vrier.jpg",
+		"image": "ventose.jpg",
 		"description": "Période des vents",
 		"notes": [
 			"Les mois d'hiver terminent en -ôse, du latin -osus, « doté de »",
@@ -781,7 +781,7 @@ export default [
 	},
 	{
 		"name": "Germinal",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Germinal_commence_le_21_ou_22_mars.jpg",
+		"image": "germinal.jpg",
 		"description": "Période de la germination",
 		"notes": [
 			"Les mois du printemps terminent en -al, du latin -alis, suffixe adjectival",
@@ -911,7 +911,7 @@ export default [
 	},
 	{
 		"name": "Floréal",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flor%C3%A9al_commence_le_21_avril.jpg",
+		"image": "floreal.jpg",
 		"description": "Période de l'épanouissement des fleurs",
 		"notes": [],
 		"days": [
@@ -1039,7 +1039,7 @@ export default [
 	},
 	{
 		"name": "Prairial",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Prairial_commence_le_21_mai.jpg",
+		"image": "prairial.jpg",
 		"description": "Période des récoltes des prairies",
 		"notes": [],
 		"days": [
@@ -1167,7 +1167,7 @@ export default [
 	},
 	{
 		"name": "Messidor",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Messidor_commence_le_21_ou_22_juin.jpg",
+		"image": "messidor.jpg",
 		"description": "Période des moissons",
 		"notes": [
 			"Du latin messis, « moisson »"
@@ -1297,7 +1297,7 @@ export default [
 	},
 	{
 		"name": "Thermidor",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Thermidor_commence_le_20_ou_21_juillet.jpg",
+		"image": "thermidor.jpg",
 		"description": "Période des chaleurs",
 		"notes": [
 			"Dans le texte primitif, le second mois de l'été s'appelait non pas « thermidor » (du grec Thermê chaleur), mais « fervidor », du mot Fervidus, signifiant brûlant en latin."
@@ -1427,7 +1427,7 @@ export default [
 	},
 	{
 		"name": "Fructidor",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Fructidor_commence_le_21_ou_22_ao%C3%BBt.jpg",
+		"image": "fructidor.jpg",
 		"description": "Période des fruits",
 		"notes": [
 			"Les mois d'été terminent en -idor, du grec dôron, « don »",
@@ -1557,6 +1557,7 @@ export default [
 	},
 	{
 		"name": "Jours complémentaires (Sansculottides)",
+		"image": "sans_culottes.jpg",
 		"description": "",
 		"notes": [
 			"Ces jours complémentaires sont placés après le dernier mois de l'année, fructidor, afin de faire correspondre le jour de l'an avec le passage de l'équinoxe d'automne au méridien de Paris. Ces 5 ou 6 jours étaient chômés.",

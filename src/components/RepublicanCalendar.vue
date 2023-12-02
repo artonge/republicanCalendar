@@ -26,8 +26,10 @@ if (!isSextile(republicanYear)) {
 		</div>
 		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
 			:republicanYear="republicanYear"></RepublicanMonth>
-		<!-- Back page -->
-		<div class="A4-page"></div>
+		<div id="back-page" class="A4-page">
+			<img src="pictures/fete_federation.jpg" alt="">
+			<span>Charles Thévenin, <i>La fête de la Fédération</i></span>
+		</div>
 	</div>
 </template>
 
@@ -62,6 +64,17 @@ if (!isSextile(republicanYear)) {
 
 	i {
 		margin-top: 20px;
+	}
+}
+
+#back-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		width: 100%;
+		object-fit: scale-down;
 	}
 }
 </style>

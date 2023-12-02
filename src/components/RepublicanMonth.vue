@@ -12,7 +12,7 @@ defineProps<{
 <template>
 	<div class="month">
 		<div class="month__image A4-page">
-			<img :src="month.image" v-if="month.image !== undefined" alt="">
+			<img :src="`pictures/${month.image}`" v-if="month.image !== undefined" alt="">
 		</div>
 		<div class="month__grid A4-page">
 			<div class="month__grid__month_title">
@@ -61,6 +61,10 @@ defineProps<{
 .month {
 	&__image {
 		justify-content: center;
+
+		img {
+			object-fit: scale-down;
+		}
 	}
 
 	&__grid {
