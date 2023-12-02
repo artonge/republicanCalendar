@@ -61,8 +61,10 @@ defineProps<{
 .month {
 	&__image {
 		justify-content: center;
+		padding: 1%;
 
 		img {
+			width: 100%;
 			object-fit: scale-down;
 		}
 	}

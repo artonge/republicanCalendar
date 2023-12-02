@@ -71,9 +71,11 @@ if (!isSextile(republicanYear)) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 2%;
 
 	img {
 		width: 100%;
+		margin-bottom: 8px;
 		object-fit: scale-down;
 	}
 }
