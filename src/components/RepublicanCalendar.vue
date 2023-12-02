@@ -26,6 +26,8 @@ if (!isSextile(republicanYear)) {
 		</div>
 		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
 			:republicanYear="republicanYear"></RepublicanMonth>
+		<!-- Back page -->
+		<div class="A4-page"></div>
 	</div>
 </template>
 

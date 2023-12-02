@@ -34,8 +34,6 @@
 	--color-text: var(--vt-c-text-light-1);
 
 	--section-gap: 160px;
-
-	--color-A4-page: #faecd2;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -80,9 +78,9 @@ body {
 	height: 210mm;
 	box-sizing: border-box;
 	display: flex;
-	background-color: var(--color-A4-page);
 	break-before: page;
 	/* Keep background color when printing */
 	print-color-adjust: exact !important;
 	-webkit-print-color-adjust: exact !important;
+	/* border: 1px solid grey; */
 }

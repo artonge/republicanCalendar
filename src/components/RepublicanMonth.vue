@@ -11,8 +11,8 @@ defineProps<{
 
 <template>
 	<div class="month">
-		<div class="month__image A4-page" v-if="month.image !== undefined">
-			<img :src="month.image" alt="">
+		<div class="month__image A4-page">
+			<img :src="month.image" v-if="month.image !== undefined" alt="">
 		</div>
 		<div class="month__grid A4-page">
 			<div class="month__grid__month_title">
