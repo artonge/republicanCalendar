@@ -11,6 +11,7 @@ export type Day = {
 export type Month = {
 	name: string,
 	image?: string,
+	image_description?: string,
 	description?: string,
 	notes: string[],
 	days: Day[],

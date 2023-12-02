@@ -13,6 +13,7 @@ defineProps<{
 	<div class="month">
 		<div class="month__image A4-page">
 			<img :src="`pictures/${month.image}`" v-if="month.image !== undefined" alt="">
+			<div v-if="month.image_description !== undefined" alt="" v-html="month.image_description" />
 		</div>
 		<div class="month__grid A4-page">
 			<div class="month__grid__month_title">
@@ -60,12 +61,15 @@ defineProps<{
 <style lang="scss" scoped>
 .month {
 	&__image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 		padding: 1%;
 
 		img {
-			width: 100%;
 			object-fit: scale-down;
+			max-height: 100%;
 		}
 	}
 

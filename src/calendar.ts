@@ -1558,6 +1558,7 @@ export default [
 	{
 		"name": "Jours complémentaires (Sansculottides)",
 		"image": "sans_culottes.jpg",
+		"image_description": "Jean-Baptiste Lesueur, <i>Sans-culottes en armes</i>",
 		"description": "",
 		"notes": [
 			"Ces jours complémentaires sont placés après le dernier mois de l'année, fructidor, afin de faire correspondre le jour de l'an avec le passage de l'équinoxe d'automne au méridien de Paris. Ces 5 ou 6 jours étaient chômés.",
