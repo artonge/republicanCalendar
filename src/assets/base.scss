@@ -76,6 +76,7 @@ body {
 }
 
 .A4-page {
+	position: relative;
 	width: 297mm;
 	height: 210mm;
 	box-sizing: border-box;
@@ -86,4 +87,16 @@ body {
 	-webkit-print-color-adjust: exact !important;
 	/* background-color: var(--color-A4-page);
 	border: 1px solid grey; */
+
+	&::before {
+		content: " ";
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		margin-left: -10px;
+		width: 20px;
+		height: 20px;
+		background-color: rgba(128, 128, 128, 0.411);
+		border-radius: 100%;
+	}
 }

@@ -1,3 +1,5 @@
+import type { Calendar } from "./models";
+
 export default [
 	{
 		"name": "Vendémiaire",
@@ -1591,4 +1593,4 @@ export default [
 			},
 		],
 	},
-]
+] as Calendar
