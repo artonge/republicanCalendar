@@ -74,7 +74,8 @@ defineProps<{
 	}
 
 	&__grid {
-		padding: 1.5cm 1cm;
+		padding: 1cm;
+		padding-bottom: 1.5cm;
 		flex-direction: column;
 
 		&__month_title {

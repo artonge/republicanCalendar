@@ -36,6 +36,7 @@ if (!isSextile(republicanYear)) {
 <style lang="scss" scoped>
 #couverture {
 	padding: 1cm 2cm;
+	padding-bottom: 1.5cm;
 	box-sizing: border-box;
 	flex-direction: column;
 	align-content: center;
@@ -72,7 +73,7 @@ if (!isSextile(republicanYear)) {
 	flex-direction: column;
 	align-items: center;
 	padding: 2%;
-	padding-bottom: 3%;
+	padding-bottom: 1.5cm;
 
 	img {
 		max-width: 100%;
