@@ -2,6 +2,7 @@
 import { getGregorianDate } from "../utils";
 import type { Day, Month, Calendar } from '../models'
 import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 const { day, month, calendar, republicanYear } = defineProps<{
 	day: Day
@@ -16,7 +17,7 @@ const gregorianDate = getGregorianDate(
 	republicanYear
 )
 
-const gregorianDateString = format(gregorianDate, 'E. dd/MM/yyyy')
+const gregorianDateString = format(gregorianDate, 'E P', { locale: fr })
 
 const isStartOfMonth = gregorianDate.getDate() === 1
 const isStartOfWeek = gregorianDate.getDay() === 1
@@ -68,7 +69,6 @@ const isStartOfWeek = gregorianDate.getDay() === 1
 	background-color: rgba($color: #919191, $alpha: 0.3);
 
 	.day__gregorian {
-		text-decoration: underline;
 		font-weight: bold;
 	}
 }
