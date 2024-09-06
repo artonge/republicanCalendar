@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { getGregorianDate } from "../utils";
 import type { Day, Month, Calendar } from '../models'
+import { format } from "date-fns";
 
 const { day, month, calendar, republicanYear } = defineProps<{
 	day: Day
@@ -14,10 +15,16 @@ const gregorianDate = getGregorianDate(
 	calendar.findIndex(_month => _month.name === month.name) + 1,
 	republicanYear
 )
+
+const gregorianDateString = format(gregorianDate, 'E. dd/MM/yyyy')
+
+const isStartOfMonth = gregorianDate.getDate() === 1
+const isStartOfWeek = gregorianDate.getDay() === 1
+
 </script>
 
 <template>
-	<div class="day">
+	<div class="day" :class="{ 'start-of-month': isStartOfMonth, 'start-of-week': isStartOfWeek }">
 		<div class="day__day">
 			{{ day.day }}
 		</div>
@@ -25,7 +32,7 @@ const gregorianDate = getGregorianDate(
 			{{ day.name }}
 		</div>
 		<small class="day__gregorian">
-			({{ gregorianDate }})
+			({{ gregorianDateString }})
 		</small>
 	</div>
 </template>
@@ -55,5 +62,18 @@ const gregorianDate = getGregorianDate(
 		font-size: 10px;
 		text-align: right;
 	}
+}
+
+.start-of-month {
+	background-color: rgba($color: #919191, $alpha: 0.3);
+
+	.day__gregorian {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+}
+
+.start-of-week {
+	background-color: rgba($color: #919191, $alpha: 0.1);
 }
 </style>
