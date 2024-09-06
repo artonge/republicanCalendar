@@ -18,7 +18,7 @@ if (!isSextile(republicanYear)) {
 <template>
 	<div id="calendar">
 		<div id="couverture" class="A4-page">
-			<img src="pictures/couverture.jpg">
+			<img :src="`pictures/couverture.jpg`">
 
 			<h1>Calendrier Républicain</h1>
 			<h2>de l'An {{ romanNumeral(republicanYear) }} ({{ republicanYear }})</h2>
@@ -27,7 +27,7 @@ if (!isSextile(republicanYear)) {
 		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
 			:republicanYear="republicanYear"></RepublicanMonth>
 		<div id="back-page" class="A4-page">
-			<img src="pictures/fete_federation.jpg" alt="">
+			<img :src="`pictures/fete_federation.jpg`" alt="">
 			<span>Charles Thévenin, <i>La fête de la Fédération</i></span>
 		</div>
 	</div>
