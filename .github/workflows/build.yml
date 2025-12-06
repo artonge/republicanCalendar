@@ -6,14 +6,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm lint
+      - run: npm type-check
+
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: ./scripts/cities.sh
       - run: npm install
-      - run: npm run build-only -- --mode dev
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v1.0.7
         with:
           path: dist
