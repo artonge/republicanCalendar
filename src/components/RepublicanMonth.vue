@@ -103,6 +103,7 @@ defineProps<{
 			&__day {
 				flex-basis: 100%;
 				flex-grow: 1;
+				font-weight: bold;
 				padding-left: 4px;
 			}
 		}
