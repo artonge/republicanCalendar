@@ -18,7 +18,7 @@ if (!isSextile(republicanYear)) {
 <template>
 	<div id="calendar">
 		<div id="couverture" class="A4-page">
-			<img :src="`pictures/couverture.jpg`">
+			<img :src="`pictures/couverture.png`">
 
 			<h1>Calendrier Républicain</h1>
 			<h2>de l'An {{ romanNumeral(republicanYear) }} ({{ republicanYear }})</h2>
