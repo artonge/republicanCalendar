@@ -93,51 +93,51 @@ const gregorianMonth = format(gregorianDate, 'MMMM', { locale: fr })
 		text-align: right;
 
 		&--is-janvier {
-			color: #1E88E5;
+			color: #013788;
 		}
 
 		&--is-février {
-			color: #1976D2;
+			color: #147ac9;
 		}
 
 		&--is-mars {
-			color: #43A047;
+			color: #5a7c2e;
 		}
 
 		&--is-avril {
-			color: #66BB6A;
+			color: #02b60b;
 		}
 
 		&--is-mai {
-			color: #FFA000;
+			color: #135f00;
 		}
 
 		&--is-juin {
-			color: #EF6C00;
+			color: #e6a900;
 		}
 
 		&--is-juillet {
-			color: #E53935;
+			color: #e95325;
 		}
 
 		&--is-août {
-			color: #FF7043;
+			color: #ce1515;
 		}
 
 		&--is-septembre {
-			color: #FFB74D;
+			color: #e6a900;
 		}
 
 		&--is-octobre {
-			color: #8D6E63;
+			color: #6D4C41;
 		}
 
 		&--is-novembre {
-			color: #757575;
+			color: #455A64;
 		}
 
 		&--is-décembre {
-			color: #1976D2;
+			color: #147ac9;
 		}
 	}
 
