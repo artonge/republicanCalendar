@@ -578,7 +578,8 @@ export default [
 		"image": "nivose.jpg",
 		"description": "Période de la neige",
 		"notes": [
-			"Du latin nix, nivis « neige »",
+			"Du latin nix, nivis « neige ».",
+			"Les jours de ce mois sont consacrés aux matériaux terrestres.",
 		],
 		"days": [
 			{
@@ -1337,7 +1338,11 @@ export default [
 		"name": "Floréal",
 		"image": "floreal.jpg",
 		"description": "Période de l'épanouissement des fleurs",
-		"notes": [],
+		"notes": [
+			"Dans le calendrier républicain, les jours sont principalement consacrés aux végétaux.",
+			"Les 5e jours des semaines sont consacrés aux animaux.",
+			"Les 10e jours des semaines sont consacrés aux outils.",
+		],
 		"days": [
 			{
 				"day": 1,
