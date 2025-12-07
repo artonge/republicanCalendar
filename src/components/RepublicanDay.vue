@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getGregorianDate } from "../utils";
 import { type Day, type Month, type Calendar, DayTypeCategory } from '../models'
-import { format } from "date-fns";
+import { format, getWeek } from "date-fns";
 import { fr } from "date-fns/locale";
 
 const { day, month, calendar, republicanYear } = defineProps<{
@@ -19,21 +19,21 @@ const gregorianDate = getGregorianDate(
 
 const gregorianDateString = format(gregorianDate, 'E P', { locale: fr })
 
-const isStartOfMonth = gregorianDate.getDate() === 1
-const isStartOfWeek = gregorianDate.getDay() === 1
+const isOddGregorianWeek = getWeek(gregorianDate) % 2 === 1
+const gregorianMonth = format(gregorianDate, 'MMMM', { locale: fr })
 
 </script>
 
 <template>
-	<div class="day" :class="{ 'start-of-month': isStartOfMonth, 'start-of-week': isStartOfWeek }">
-		<div class="day__day">
+	<div class="day" :class="{ 'day--is-odd-gregorian-week': isOddGregorianWeek }">
+		<div class="day__number">
 			{{ day.day }}
 		</div>
 		<div class="day__name">
 			<span class="day__name__type" :class="{ [`day__name__type--${DayTypeCategory[day.type]}`]: true }"></span>
 			{{ day.name }}
 		</div>
-		<small class="day__gregorian">
+		<small class="day__gregorian" :class="{ [`day__gregorian--is-${gregorianMonth.toLowerCase()}`]: true }">
 			({{ gregorianDateString }})
 		</small>
 	</div>
@@ -49,7 +49,7 @@ const isStartOfWeek = gregorianDate.getDay() === 1
 	display: flex;
 	flex-direction: column;
 
-	&__day {
+	&__number {
 		font-weight: bold;
 	}
 
@@ -91,18 +91,58 @@ const isStartOfWeek = gregorianDate.getDay() === 1
 		font-style: italic;
 		font-size: 10px;
 		text-align: right;
+
+		&--is-janvier {
+			color: #1E88E5;
+		}
+
+		&--is-février {
+			color: #1976D2;
+		}
+
+		&--is-mars {
+			color: #43A047;
+		}
+
+		&--is-avril {
+			color: #66BB6A;
+		}
+
+		&--is-mai {
+			color: #FFA000;
+		}
+
+		&--is-juin {
+			color: #EF6C00;
+		}
+
+		&--is-juillet {
+			color: #E53935;
+		}
+
+		&--is-août {
+			color: #FF7043;
+		}
+
+		&--is-septembre {
+			color: #FFB74D;
+		}
+
+		&--is-octobre {
+			color: #8D6E63;
+		}
+
+		&--is-novembre {
+			color: #757575;
+		}
+
+		&--is-décembre {
+			color: #1976D2;
+		}
 	}
-}
 
-.start-of-month {
-	background-color: rgba($color: #919191, $alpha: 0.3);
-
-	.day__gregorian {
-		font-weight: bold;
+	&--is-odd-gregorian-week {
+		background-color: rgba($color: #919191, $alpha: 0.1);
 	}
-}
-
-.start-of-week {
-	background-color: rgba($color: #919191, $alpha: 0.1);
 }
 </style>
