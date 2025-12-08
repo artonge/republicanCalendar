@@ -33,7 +33,7 @@ export function romanNumeral(num: number): string {
 					case 4:
 						return romanResult + ['', 'M', 'MM', 'MMM'][n]
 					default:
-						return ''
+						throw new Error("Number too large for roman numeral conversion")
 				}
 			},
 			'',
