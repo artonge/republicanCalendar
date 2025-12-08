@@ -1,19 +1,20 @@
 import { set, addDays } from "date-fns"
 
+const SEPT_21_1792 = set(new Date(), { date: 21, month: 9 - 1, year: 1792, hours: 0, minutes: 0, seconds: 0, milliseconds: 0 })
+const SEXTILE_RATE = 0.242222
+
 export function isSextile(republicanYear: number): boolean {
-	return Math.floor((republicanYear - 1) * 0.242222) - Math.floor((republicanYear) * 0.242222) !== 0
+	return Math.floor((republicanYear - 1) * SEXTILE_RATE) - Math.floor((republicanYear) * SEXTILE_RATE) !== 0
 }
 
 export function getGregorianDate(republicanDay: number, republicanMonth: number, republicanYear: number): Date {
-	const sept_21_1792 = set(new Date(), { date: 21, month: 9 - 1, year: 1792, hours: 0, minutes: 0, seconds: 0, milliseconds: 0 })
-
 	const dayCountInCompletedMonths = (republicanMonth - 1) * 30
 	const dayCountInCompletedYears = (republicanYear - 1) * 365
-	const nbOfSextileDays = Math.floor((republicanYear - 1) * 0.242222)
+	const nbOfSextileDays = Math.floor((republicanYear - 1) * SEXTILE_RATE)
 
 	const daysSince_sept_21_1792 = republicanDay + dayCountInCompletedMonths + dayCountInCompletedYears + nbOfSextileDays
 
-	return addDays(sept_21_1792, daysSince_sept_21_1792)
+	return addDays(SEPT_21_1792, daysSince_sept_21_1792)
 }
 
 // 232 => MMXXIV
