@@ -7,9 +7,10 @@ export default [
 		"name": "Vendémiaire",
 		"image": "vendemiaire.jpg",
 		"description": "Période des vendanges",
-		"notes": [
+		"month_notes": [
 			"Cette période correspond à la saison des vendanges dans l'hémisphère nord. Bien que ses concepteurs l'aient voulu universel, le calendrier républicain était très influencé par le monde rural français.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -197,9 +198,10 @@ export default [
 		"name": "Brumaire",
 		"image": "brumaire.jpg",
 		"description": "Période des brumes et des brouillards",
-		"notes": [
+		"month_notes": [
 			"Ce mois a donné son nom au coup d'État, intervenu le 18 brumaire an VIII (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire (nom propre, avec majuscule à la deuxième partie du nom), mais également de Brumaire (là aussi avec une majuscule, pour distinguer du nom du mois en général).",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -387,9 +389,10 @@ export default [
 		"name": "Frimaire",
 		"image": "frimaire.jpg",
 		"description": "Période des froids",
-		"notes": [
+		"month_notes": [
 			"Les mois d'automne terminent en -aire, du latin -arius, suffixe adjectival",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -577,10 +580,11 @@ export default [
 		"name": "Nivôse",
 		"image": "nivose.jpg",
 		"description": "Période de la neige",
-		"notes": [
+		"month_notes": [
 			"Du latin nix, nivis « neige ».",
 			"Les jours de ce mois sont consacrés aux matériaux terrestres.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -768,9 +772,10 @@ export default [
 		"name": "Pluviôse",
 		"image": "pluviose.jpg",
 		"description": "Période des pluies",
-		"notes": [
+		"month_notes": [
 			"Le nom de ce mois a été rendu célèbre par le sonnet de Charles Baudelaire Spleen I, des Fleurs du mal.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -958,9 +963,10 @@ export default [
 		"name": "Ventôse",
 		"image": "ventose.jpg",
 		"description": "Période des vents",
-		"notes": [
+		"month_notes": [
 			"Les mois d'hiver terminent en -ôse, du latin -osus, « doté de »",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -1148,9 +1154,10 @@ export default [
 		"name": "Germinal",
 		"image": "germinal.jpg",
 		"description": "Période de la germination",
-		"notes": [
+		"month_notes": [
 			"Les mois du printemps terminent en -al, du latin -alis, suffixe adjectival",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -1338,11 +1345,12 @@ export default [
 		"name": "Floréal",
 		"image": "floreal.jpg",
 		"description": "Période de l'épanouissement des fleurs",
-		"notes": [
+		"month_notes": [
 			"Dans le calendrier républicain, les jours sont principalement consacrés aux végétaux.",
 			"Les 5e jours des semaines sont consacrés aux animaux.",
 			"Les 10e jours des semaines sont consacrés aux outils.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -1530,7 +1538,8 @@ export default [
 		"name": "Prairial",
 		"image": "prairial.jpg",
 		"description": "Période des récoltes des prairies",
-		"notes": [],
+		"month_notes": [],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -1718,9 +1727,10 @@ export default [
 		"name": "Messidor",
 		"image": "messidor.jpg",
 		"description": "Période des moissons",
-		"notes": [
+		"month_notes": [
 			"Du latin messis, « moisson »",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -1908,9 +1918,10 @@ export default [
 		"name": "Thermidor",
 		"image": "thermidor.jpg",
 		"description": "Période des chaleurs",
-		"notes": [
+		"month_notes": [
 			"Dans le texte primitif, le second mois de l'été s'appelait non pas « thermidor » (du grec Thermê chaleur), mais « fervidor », du mot Fervidus, signifiant brûlant en latin.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -2098,9 +2109,10 @@ export default [
 		"name": "Fructidor",
 		"image": "fructidor.jpg",
 		"description": "Période des fruits",
-		"notes": [
+		"month_notes": [
 			"Les mois d'été terminent en -idor, du grec dôron, « don »",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,
@@ -2287,12 +2299,13 @@ export default [
 	{
 		"name": "Jours complémentaires (Sans-culottides)",
 		"image": "sans_culottes.jpg",
-		"image_description": "Jean-Baptiste Lesueur, <i>Sans-culottes en armes</i>",
+		"image_description": "Jean-Baptiste Lesueur, Sans-culottes en armes",
 		"description": "",
-		"notes": [
+		"month_notes": [
 			"Ces jours complémentaires sont placés après le dernier mois de l'année, fructidor, afin de faire correspondre le jour de l'an avec le passage de l'équinoxe d'automne au méridien de Paris. Ces 5 ou 6 jours étaient chômés.",
 			"Initialement nommés sans-culottides (par référence aux sans-culottes) par le décret du 4 frimaire an II, ils furent rapidement rebaptisés jours complémentaires par un nouveau décret du 7 fructidor an III.",
 		],
+		"calendar_notes": [],
 		"days": [
 			{
 				"day": 1,

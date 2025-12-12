@@ -17,6 +17,8 @@ if (!isSextile(republicanYear)) {
 
 <template>
 	<div id="calendar">
+		<div id="couverture" class="A4-page no-print">
+		</div>
 		<div id="couverture" class="A4-page">
 			<figure>
 				<img :src="`pictures/couverture.png`">
@@ -27,8 +29,14 @@ if (!isSextile(republicanYear)) {
 			<h2>de l'An {{ romanNumeral(republicanYear) }} ({{ republicanYear }})</h2>
 			<i>du 22 septembre {{ currentGregorianYear }} au 21 septembre {{ currentGregorianYear + 1 }}</i>
 		</div>
-		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
-			:republicanYear="republicanYear"></RepublicanMonth>
+
+		<RepublicanMonth v-for="(month, index) in calendar"
+			:class="{ [`month--${index}`]: true }"
+			:key="month.name"
+			:month="month"
+			:calendar="calendar"
+			:republicanYear="republicanYear"/>
+
 		<div id="back-page" class="A4-page">
 			<figure>
 				<img :src="`pictures/fete_federation.jpg`" alt="">
@@ -39,61 +47,36 @@ if (!isSextile(republicanYear)) {
 </template>
 
 <style lang="scss" scoped>
-figure {
-	flex-grow: 1;
-	height: 0;
-	margin-bottom: 8px;
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-
-	figcaption {
-		font-size: 12px;
-		text-align: center;
-		font-style: italic;
-	}
-}
-
 #couverture {
-	padding: 1cm 2cm;
-	padding-bottom: 1.5cm;
-	box-sizing: border-box;
-	flex-direction: column;
-	align-content: center;
-
-	h1,
-	h2,
-	i {
-		text-align: center;
-	}
+	text-align: center;
 
 	h1 {
-		margin-top: 20px;
+		margin-top: 30px;
 		font-weight: bold;
 		word-spacing: 8px;
 	}
 
 	h2 {
-		word-spacing: 8px;
+		word-spacing: 6px;
 	}
 
 	i {
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 }
 
+#couverture,
 #back-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2%;
-	padding-bottom: 1.5cm;
-
 	figure {
-		margin-bottom: 24px;
+		flex-grow: 1;
+		height: 0;
+		margin-bottom: 8px;
+	}
+}
+
+#calendar {
+	.month--12 :deep(.information__image) {
+		width: 50%;
 	}
 }
 </style>

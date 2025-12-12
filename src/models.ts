@@ -48,7 +48,8 @@ export type Month = {
 	image: string,
 	image_description?: string,
 	description: string,
-	notes: string[],
+	month_notes: string[],
+	calendar_notes: string[],
 	days: Day[],
 }
 

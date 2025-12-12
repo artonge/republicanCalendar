@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { getGregorianDate } from "../utils";
-import { type Day, type Month, type Calendar, DayTypeCategory } from '../models'
 import { format, getWeek } from "date-fns";
 import { fr } from "date-fns/locale";
+
+import { getGregorianDate } from "../utils";
+import { type Day, type Month, type Calendar } from '../models'
+import DayTypeIndicator from "./DayTypeIndicator.vue";
 
 const { day, month, calendar, republicanYear } = defineProps<{
 	day: Day
@@ -30,7 +32,7 @@ const isOddGregorianMonth = gregorianDate.getMonth() % 2 === 1
 			{{ day.day }}
 		</div>
 		<div class="day__name">
-			<span class="day__name__type" :class="{ [`day__name__type--${DayTypeCategory[day.type]}`]: true }"></span>
+			<DayTypeIndicator :dayType="day.type" />
 			{{ day.name }}
 		</div>
 		<small class="day__gregorian" :class="{ 'day__gregorian--is-odd-week': isOddGregorianWeek }">
@@ -41,11 +43,9 @@ const isOddGregorianMonth = gregorianDate.getMonth() % 2 === 1
 
 <style lang="scss" scoped>
 .day {
-	padding: 8px;
 	box-sizing: border-box;
-	table-layout: fixed;
-	border-collapse: collapse;
-	word-wrap: break-word;
+	padding: 8px;
+
 	display: flex;
 	flex-direction: column;
 
@@ -54,37 +54,8 @@ const isOddGregorianMonth = gregorianDate.getMonth() % 2 === 1
 	}
 
 	&__name {
-		font-weight: normal;
 		font-size: 12px;
 		flex-grow: 1;
-
-		&__type {
-			width: 6px;
-			height: 6px;
-			border-radius: 100%;
-			margin-inline-end: 4px;
-			display: inline-block;
-
-			&--végétal {
-				background-color: #4CAF50;
-			}
-
-			&--animal {
-				background-color: #FF5722;
-			}
-
-			&--minéral {
-				background-color: #9E9E9E;
-			}
-
-			&--outil {
-				background-color: #3F51B5;
-			}
-
-			&--fête {
-				background-color: #2196F3;
-			}
-		}
 	}
 
 	&__gregorian {
@@ -99,7 +70,7 @@ const isOddGregorianMonth = gregorianDate.getMonth() % 2 === 1
 	}
 
 	&--is-odd-gregorian-month {
-		background-color: rgba($color: #919191, $alpha: 0.1);
+		background-color: rgba($color: #919191, $alpha: 0.07);
 	}
 }
 </style>

@@ -23,12 +23,23 @@ body {
 	height: 210mm;
 	box-sizing: border-box;
 	display: flex;
+	flex-direction: column;
 	break-before: page;
 	/* Keep background color when printing */
 	print-color-adjust: exact !important;
 	-webkit-print-color-adjust: exact !important;
 	// For development, to display page borders
 	// border: 1px solid grey;
+
+	padding: 0.7cm;
+
+	&:nth-child(odd) {
+		padding-top: 2cm;
+	}
+
+	&:nth-child(even) {
+		padding-bottom: 2cm;
+	}
 
 	// Hole circle at the bottom of the page.
 	&::before {
@@ -41,5 +52,25 @@ body {
 		height: 20px;
 		background-color: rgba(128, 128, 128, 0.411);
 		border-radius: 100%;
+	}
+
+	&:nth-child(odd)::before {
+		top: 30px;
+		bottom: auto;
+	}
+}
+
+figure {
+	text-align: center;
+
+	img {
+		max-height: 100%;
+		object-fit: contain;
+	}
+
+	figcaption {
+		font-size: 12px;
+		text-align: center;
+		font-style: italic;
 	}
 }
