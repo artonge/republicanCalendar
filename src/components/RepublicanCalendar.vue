@@ -18,8 +18,10 @@ if (!isSextile(republicanYear)) {
 <template>
 	<div id="calendar">
 		<div id="couverture" class="A4-page">
-			<img :src="`pictures/couverture.png`">
-			<span>Philibert-Louis Debucourt, <i>Allégorie du calendrier républicain</i></span>
+			<figure>
+				<img :src="`pictures/couverture.png`">
+				<figcaption>Philibert-Louis Debucourt, Allégorie du calendrier républicain</figcaption>
+			</figure>
 
 			<h1>Calendrier Républicain</h1>
 			<h2>de l'An {{ romanNumeral(republicanYear) }} ({{ republicanYear }})</h2>
@@ -28,25 +30,39 @@ if (!isSextile(republicanYear)) {
 		<RepublicanMonth v-for="month in calendar" :key="month.name" :month="month" :calendar="calendar"
 			:republicanYear="republicanYear"></RepublicanMonth>
 		<div id="back-page" class="A4-page">
-			<img :src="`pictures/fete_federation.jpg`" alt="">
-			<span>Charles Thévenin, <i>La fête de la Fédération</i></span>
+			<figure>
+				<img :src="`pictures/fete_federation.jpg`" alt="">
+				<figcaption>Charles Thévenin, La fête de la Fédération</figcaption>
+			</figure>
 		</div>
 	</div>
 </template>
 
 <style lang="scss" scoped>
+figure {
+	flex-grow: 1;
+	height: 0;
+	margin-bottom: 8px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	figcaption {
+		font-size: 12px;
+		text-align: center;
+		font-style: italic;
+	}
+}
+
 #couverture {
 	padding: 1cm 2cm;
 	padding-bottom: 1.5cm;
 	box-sizing: border-box;
 	flex-direction: column;
 	align-content: center;
-
-	img {
-		flex-grow: 1;
-		height: 0;
-		object-fit: contain;
-	}
 
 	h1,
 	h2,
@@ -76,12 +92,8 @@ if (!isSextile(republicanYear)) {
 	padding: 2%;
 	padding-bottom: 1.5cm;
 
-	img {
-		max-width: 100%;
-		height: 0;
-		flex-grow: 1;
-		margin-bottom: 8px;
-		object-fit: scale-down;
+	figure {
+		margin-bottom: 24px;
 	}
 }
 </style>
