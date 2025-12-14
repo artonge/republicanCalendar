@@ -45,15 +45,11 @@ defineProps<{
 		flex-direction: column;
 		justify-content: space-between;
 
-		div {
+		p {
 			border: 1px solid;
 			border-radius: 8px;
 			padding: 12px 20px;
 			background-color: rgba($color: #919191, $alpha: 0.02);
-		}
-
-		p {
-			margin-top: 4px;
 		}
 	}
 }
