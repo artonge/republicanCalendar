@@ -13,14 +13,8 @@ defineProps<{
 			<figcaption v-if="month.image_description !== undefined" v-html="month.image_description" />
 		</figure>
 
-		<div class="information__notes">
-			<div class="information__notes__month" v-if="month.month_notes.length > 0">
-				<p v-for="note in month.month_notes" :key="note">{{ note }}</p>
-			</div>
-
-			<div class="information__notes__calendar" v-if="month.calendar_notes.length > 0">
-				<p v-for="note in month.calendar_notes" :key="note">{{ note }}</p>
-			</div>
+		<div class="information__notes" v-if="month.notes.length > 0">
+			<p v-for="(note, index) in month.notes" :key="index">{{ note.content }}</p>
 		</div>
 	</div>
 </template>

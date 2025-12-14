@@ -43,13 +43,17 @@ export type Day = {
 	wikipedia: string,
 }
 
+export type CalendarNote = {
+	type: 'calendar' | 'month',
+	content: string,
+}
+
 export type Month = {
 	name: string,
 	image: string,
 	image_description?: string,
 	description: string,
-	month_notes: string[],
-	calendar_notes: string[],
+	notes: CalendarNote[],
 	days: Day[],
 }
 
