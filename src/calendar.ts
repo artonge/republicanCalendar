@@ -8,7 +8,15 @@ export default [
 		description: "Période des vendanges",
 		notes: [
 			{
-				type: 'month',
+				title: 'Histoire - Création',
+				content: "Le calendrier républicain a été adopté par décret de la Convention nationale le <time>15 vendémiaire an II</time> (6 octobre 1793). Le début de l'ère républicaine a lui été fixé rétroactivement au 22 septembre 1792, jour de l'équinoxe d'automne et de la proclamation de la République.",
+			},
+			{
+				title: 'Citation - Charles-Gilbert Romme',
+				content: `<blockquote>"Le <time>22 septembre</time> fut décrété le premier de la République, et le même jour à 9 heures 18 minutes 30 secondes du matin le soleil est arrivé à l'équinoxe vrai, en entrant dans le signe de la balance. Ainsi l'égalité des jours aux nuits était marquée dans le ciel, au moment même où l'égalité civile et morale était proclamée par les représentants du peuple français comme le fondement sacré de son nouveau gouvernement"</blockquote>`,
+			},
+			{
+				title: 'À propos de vendémiaire',
 				content: "Cette période correspond à la saison des vendanges dans l'hémisphère nord. Bien que ses concepteurs l'aient voulu universel, le calendrier républicain était très influencé par le monde rural français.",
 			},
 		],
@@ -201,9 +209,22 @@ export default [
 		description: "Période des brumes et des brouillards",
 		notes: [
 			{
-				type: 'month',
-				content: "Ce mois a donné son nom au coup d'État, intervenu le 18 brumaire an VIII (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire (nom propre, avec majuscule à la deuxième partie du nom), mais également de Brumaire (là aussi avec une majuscule, pour distinguer du nom du mois en général).",
+				title: 'Choix techniques - Rupture avec la religion',
+				content: `Le calendrier avait pour volonté de rompre avec les origines religieuses et donc monarchiques du calendrier Grégorien. Les changements sont considérables:
+<ul>
+<li>Changement d'ère, l'année 0 n'a plus comme référence la naissance du Christ, mais celle de la République française.</li>
+<li>Les jours ne sont plus associés à des saints, mais à des mots provenant de la nature et du monde rural.</li>
+<li>Les fêtes chômées liées au christianisme sont supprimées, et sont rapidement remplacées par les fêtes révolutionnaires.</li>
+</ul>`
 			},
+			{
+				title: 'Anecdote - 18 Brumaire',
+				content: "Ce mois a donné son nom au coup d'État, intervenu le <time>18 brumaire an VIII</time> (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire, nom propre, avec majuscule à la deuxième partie du nom, mais également de Brumaire, là aussi avec une majuscule, pour distinguer du nom du mois en général.",
+			},
+			{
+				title: 'Suffixe saisonnier',
+				content: 'Tous les mois d\'automne se terminent par le suffixe "-aire" du suffixe adjectival latin "-arius".'
+			}
 		],
 		days: [
 			{
@@ -394,9 +415,18 @@ export default [
 		description: "Période des froids",
 		notes: [
 			{
-				type: 'month',
-				content: "Les mois d'automne terminent en -aire, du latin -arius, suffixe adjectival",
+				title: 'Choix techniques - Système décimal',
+				content: 'Comme pour le système métrique adopté à la même période, le calendrier républicain a des fondements scientifique et rationnels. Les révolutionnaires français décident d\'utiliser un système basé sur le système décimal. Les semaines sont remplacées par des décades de dix jours. Une année est alors composée de douze mois eux mêmes composés de trois décades. Cette année est ensuite complétée par cinq jours complémentaires, ou six pour les années sextiles. S\'y ajoute, en outre, une division décimale des jours, des heures et des minutes.',
 			},
+			// {
+			// 	title: 'Anecdote',
+			// 	content: 'C\'est en frimaire an II (novembre-décembre 1793) que fut votée la "Loi des suspects" et que la Terreur atteignit son apogée. Le décret du 4 frimaire an II (24 novembre 1793) organisa le gouvernement révolutionnaire, renforçant le pouvoir du Comité de salut public. Cette période marqua l\'un des moments les plus sombres de la Révolution française.',
+			// },
+			{
+				title: 'Étymologie',
+				content: 'Frimaire dérive du latin "frigus" et de l\'ancien français "frimas" (gelée blanche, givre).',
+			},
+
 		],
 		days: [
 			{
@@ -587,12 +617,20 @@ export default [
 		description: "Période de la neige",
 		notes: [
 			{
-				type: 'month',
-				content: "Du latin nix, nivis « neige ».",
+				title: 'Choix technique - Association de mot',
+				content: 'Contrairement aux autres mois qui mettent en avant les végétaux, le mois de nivôse est consacrés aux matériaux terrestres.',
 			},
 			{
-				type: 'month',
-				content: "Les jours de ce mois sont consacrés aux matériaux terrestres.",
+				title: 'Histoire - Rejet populaire',
+				content: 'Le calendrier républicain n\'ayant pas su remplacer les nombreux jours fériés de la religion catholique, et les décades n\'octroyant qu\'un seul jour de repos pour neuf jours travaillés, contre un pour sept pour le semaines, peu voulaient l\'utiliser au quotidien.',
+			},
+			{
+				title: 'Suffix saisonnier',
+				content: 'Le suffixe "-ôse" des mois d\'hiver vient du latin "-osus" signifiant "qui est plein de, doté de".',
+			},
+			{
+				title: 'Étymologie',
+				content: 'Du latin nix, nivis « neige ».',
 			},
 		],
 		days: [
@@ -784,7 +822,19 @@ export default [
 		description: "Période des pluies",
 		notes: [
 			{
-				type: 'month',
+				title: 'Choix technique - Association de mot',
+				content: `Chaque jour de l'année est associé à un mote unique, plante, outil, animal ou minéral, au lieu des saints du calendrier grégorien. Cette nomenclature de 360 noms plus 5 ou 6 jours complémentaires fut créée par Fabre d'Églantine. Le type des mots est suggéré par une point de couleur:
+<ul class="day-types-legend">
+<li><div class="day-type day-type--végétal"></div>Végétal</li>
+<li><div class="day-type day-type--animal"></div>Animal</li>
+<li><div class="day-type day-type--minéral"></div>Minéral</li>
+<li><div class="day-type day-type--outil"></div>Outil</li>
+<li><div class="day-type day-type--fête"></div>Fête</li>
+</ul>
+`,
+			},
+			{
+				title: 'Anecdote - Fleurs du mal',
 				content: "Le nom de ce mois a été rendu célèbre par le sonnet de Charles Baudelaire Spleen I, des Fleurs du mal.",
 			},
 		],
@@ -977,9 +1027,17 @@ export default [
 		description: "Période des vents",
 		notes: [
 			{
-				type: 'month',
-				content: "Les mois d'hiver terminent en -ôse, du latin -osus, « doté de »",
-			},
+				title: 'Histoire - Abolition',
+				content: `<blockquote>Victorieuse dans son ambition de remodeler les structures de l’espace, par le système métrique, la Révolution a échoué dans sa tentative à l’égard de celle du temps.</blockquote>
+<br/>
+Napoléon Bonaparte abroge le calendrier républicain par le sénatus-consulte du <time>22 fructidor an XIII</time> (9 septembre 1805), avec effet au <time>1er janvier 1806</time> (11 nivôse an XIV). Le calendrier grégorien fut rétabli, marquant la fin d'une expérience de 12 ans, 2 mois et 27 jours.
+<br/>
+<br/>
+L'une des raison était de faciliter les relations diplomatiques, car bien qu'originalement calqué sur la nature, l’universalisation de ce calendrier posait problèmes sous d’autres climats et d’autres latitudes.
+<br/>
+<br/>
+Cette décision visait aussi à améliorer les relations avec l'Église catholique suite au Concordat de 1801 définissant les relations entre l'Église catholique et la République française.`
+			}
 		],
 		days: [
 			{
@@ -1170,8 +1228,12 @@ export default [
 		description: "Période de la germination",
 		notes: [
 			{
-				type: 'month',
-				content: "Les mois du printemps terminent en -al, du latin -alis, suffixe adjectival",
+				title: 'Anecdote - Germinal de Zola',
+				content: 'Émile Zola choisit "Germinal" comme titre de son célèbre roman sur les mineurs (1885). Correspondant au retour du printemps et de l\'espoir, le mois de germinal incarne aussi les idées portées durant la Révolution française et présentes dans le livre, justice sociale, lutte politique, émancipation et dignité humaine.',
+			},
+			{
+				title: 'Suffix saisonnier',
+				content: 'Les mois du printemps terminent en -al, du latin -alis, suffixe adjectival',
 			},
 		],
 		days: [
@@ -1363,16 +1425,12 @@ export default [
 		description: "Période de l'épanouissement des fleurs",
 		notes: [
 			{
-				type: 'month',
-				content: "Dans le calendrier républicain, les jours sont principalement consacrés aux végétaux.",
-			},
-			{
-				type: 'month',
-				content: "Les 5e jours des semaines sont consacrés aux animaux.",
-			},
-			{
-				type: 'month',
-				content: "Les 10e jours des semaines sont consacrés aux outils.",
+				title: 'Choix technique - Association de mot',
+				content: `Dans le calendrier républicain, les jours sont principalement consacrés aux végétaux. Mais une structure se répète chaque mois :
+<ul>
+<li>Les quintidi sont consacrés aux animaux</li>
+<li>Les décadi sont consacrés aux outils agricoles</li>
+</ul>`,
 			},
 		],
 		days: [
@@ -1562,7 +1620,12 @@ export default [
 		name: "Prairial",
 		image: "prairial.jpg",
 		description: "Période des récoltes des prairies",
-		notes: [],
+		notes: [
+			{
+				title: 'Histoire - Contexte',
+				content: 'Les paysans constituaient 85% de la population française en 1793, ce qui explique l\'omniprésence des références agricoles dans le calendrier.'
+			},
+		],
 		days: [
 			{
 				day: 1,
@@ -1752,8 +1815,12 @@ export default [
 		description: "Période des moissons",
 		notes: [
 			{
-				type: 'month',
-				"content": "Du latin messis, « moisson »",
+				title: 'Suffix saisonnier',
+				content: 'Les mois d\'été terminent en -idor, du grec ancien δῶρον (dôron), « don »',
+			},
+			{
+				title: 'Étymologie',
+				content: "Du latin messis, « moisson »",
 			},
 		],
 		days: [
@@ -1945,8 +2012,8 @@ export default [
 		description: "Période des chaleurs",
 		notes: [
 			{
-				type: 'month',
-				"content": "Dans le texte primitif, le second mois de l'été s'appelait non pas « thermidor » (du grec Thermê chaleur), mais « fervidor », du mot Fervidus, signifiant brûlant en latin.",
+				title: 'À propos de thermidor',
+				content: 'Dans le texte primitif, le second mois de l\'été s\'appelait non pas « thermidor » (du grec Thermê chaleur), mais « fervidor », du mot Fervidus, signifiant brûlant en latin.',
 			},
 		],
 		days: [
@@ -2137,10 +2204,6 @@ export default [
 		image: "fructidor.jpg",
 		description: "Période des fruits",
 		notes: [
-			{
-				type: 'month',
-				"content": "Les mois d'été terminent en -idor, du grec dôron, « don »",
-			},
 		],
 		days: [
 			{
@@ -2332,11 +2395,15 @@ export default [
 		description: "",
 		notes: [
 			{
-				type: 'month',
+				title: 'Choix technique - Jours complémentaires',
 				content: "Ces jours complémentaires sont placés après le dernier mois de l'année, fructidor, afin de faire correspondre le jour de l'an avec le passage de l'équinoxe d'automne au méridien de Paris. Ces 5 ou 6 jours étaient chômés.",
 			},
 			{
-				type: 'month',
+				title: 'Choix technique - Années sextiles',
+				content: "Lors des années sextiles, un sixème jours complémentaire apparait, le jour de la révolution.",
+			},
+			{
+				title: 'À propos des jours complémentaires',
 				content: "Initialement nommés sans-culottides (par référence aux sans-culottes) par le décret du 4 frimaire an II, ils furent rapidement rebaptisés jours complémentaires par un nouveau décret du 7 fructidor an III.",
 			},
 		],

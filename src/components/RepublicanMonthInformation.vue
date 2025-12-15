@@ -14,7 +14,10 @@ defineProps<{
 		</figure>
 
 		<div class="information__notes" v-if="month.notes.length > 0">
-			<p v-for="(note, index) in month.notes" :key="index">{{ note.content }}</p>
+			<div class="information__notes__note" v-for="(note, index) in month.notes" :key="index">
+				<span class="information__notes__note__title">{{ note.title }}</span>
+				<p class="information__notes__note__content" v-html="note.content"></p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -43,13 +46,50 @@ defineProps<{
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-evenly;
 
-		p {
+		&__note {
 			border: 1px solid;
 			border-radius: 8px;
-			padding: 12px 20px;
+			padding: 16px 20px;
 			background-color: rgba($color: #919191, $alpha: 0.02);
+			position: relative;
+
+			&__title {
+				font-weight: bold;
+				font-size: 1.2em;
+				margin-bottom: 6px;
+				position: absolute;
+				top: -0.9em;
+				background-color: white;
+				padding: 0 8px;
+			}
+
+			&__content {
+				:deep(blockquote) {
+					font-style: italic;
+				}
+
+				:deep(cite) {
+					display: inline-block;
+					padding-top: 8px;
+					width: 100%;
+					text-align: right;
+				}
+
+				:deep(time) {
+					font-style: italic;
+					text-decoration: underline;
+				}
+
+				:deep(.day-types-legend) {
+					li {
+						display: flex;
+						align-items: center;
+						gap: 4px;
+					}
+				}
+			}
 		}
 	}
 }

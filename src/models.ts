@@ -44,7 +44,7 @@ export type Day = {
 }
 
 export type CalendarNote = {
-	type: 'calendar' | 'month',
+	title: string,
 	content: string,
 }
 

@@ -10,7 +10,8 @@ defineProps<{
 	<span class="day-type" :class="{ [`day-type--${DayTypeCategory[dayType]}`]: true }"></span>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+// Purposefully global style so that we can use them inside the notes.
 .day-type {
 	width: 6px;
 	height: 6px;
