@@ -9,7 +9,7 @@ export default [
 		notes: [
 			{
 				title: 'Histoire - Création',
-				content: "Le calendrier républicain a été adopté par décret de la Convention nationale le <time>15 vendémiaire an II</time> (6 octobre 1793). Le début de l'ère républicaine a lui été fixé rétroactivement au 22 septembre 1792, jour de l'équinoxe d'automne et de la proclamation de la République.",
+				content: "Le calendrier républicain a été adopté par décret de la Convention nationale le <time>15 vendémiaire an II</time> (6 octobre 1793). Le début de l'ère républicaine a lui été fixé rétroactivement au 22 septembre 1792, jour de l'équinoxe d'automne et de la proclamation de la 1ʳᵉ République (1792-1799).",
 			},
 			{
 				title: 'Citation - Charles-Gilbert Romme',
@@ -215,11 +215,12 @@ export default [
 <li>Changement d'ère, l'année 0 n'a plus comme référence la naissance du Christ, mais celle de la République française.</li>
 <li>Les jours ne sont plus associés à des saints, mais à des mots provenant de la nature et du monde rural.</li>
 <li>Les fêtes chômées liées au christianisme sont supprimées, et sont rapidement remplacées par les fêtes révolutionnaires.</li>
+<li>Les semaines qui faisaient référence à la Genèse sont remplacées par des décades de dix jours.</li>
 </ul>`
 			},
 			{
 				title: 'Anecdote - 18 Brumaire',
-				content: "Ce mois a donné son nom au coup d'État, intervenu le <time>18 brumaire an VIII</time> (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire, nom propre, avec majuscule à la deuxième partie du nom, mais également de Brumaire, là aussi avec une majuscule, pour distinguer du nom du mois en général.",
+				content: "Ce mois a donné son nom au coup d'État, intervenu le <time>18 brumaire an VIII</time> (9 novembre 1799), qui porta le général Napoléon Bonaparte au pouvoir en France. On parle dans ce cas du 18 Brumaire ou simplement Brumaire, nom propre avec majuscule",
 			},
 			{
 				title: 'Suffixe saisonnier',
@@ -416,12 +417,15 @@ export default [
 		notes: [
 			{
 				title: 'Choix techniques - Système décimal',
-				content: 'Comme pour le système métrique adopté à la même période, le calendrier républicain a des fondements scientifiques et rationnels. Les révolutionnaires français décident d\'utiliser un système basé sur le système décimal. Les semaines sont remplacées par des décades de dix jours. Une année est alors composée de douze mois, eux-mêmes composés de trois décades. Cette année est ensuite complétée par cinq jours complémentaires, ou six pour les années sextiles. S\'y ajoute, en outre, une division décimale des jours, des heures et des minutes.',
+				content: `Comme pour le système métrique adopté à la même période, le calendrier républicain a des fondements scientifiques et rationnels. Les révolutionnaires français décident d'utiliser un système basé sur le système décimal. Les semaines sont remplacées par des décades de dix jours. Une année est alors composée de douze mois, eux-mêmes composés de trois décades. Cette année est ensuite complétée par cinq jours complémentaires, ou six pour les années sextiles.
+				Une division décimale des jours, des heures et des minutes avait été imaginée par les révolutionnaires, mais n'a jamais été mise en place.`,
 			},
-			// {
-			// 	title: 'Anecdote',
-			// 	content: 'C\'est en frimaire an II (novembre-décembre 1793) que fut votée la "Loi des suspects" et que la Terreur atteignit son apogée. Le décret du 4 frimaire an II (24 novembre 1793) organisa le gouvernement révolutionnaire, renforçant le pouvoir du Comité de salut public. Cette période marqua l\'un des moments les plus sombres de la Révolution française.',
-			// },
+			{
+				title: 'Anecdote',
+				content: `En l'An II, une période appelée "Terreur", fut l'une des plus sombres de la Révolution française. Pour sauver la République, Robespierre et son Comité de salut public traquent tous les opposants afin de ne pas revenir à la monarchie.
+
+				C'est en frimaire An II (novembre-décembre 1793) que fut votée la "Loi des suspects". Cette loi autorisait l'arrestation de toute personne suspectée d'être opposée à la République et ses valeurs. Les nobles et les prêtres réfractaires furent les premières cibles. Anne Laudet en parle dans son mémoire de maîtrise d'Histoire.`,
+			},
 			{
 				title: 'Étymologie',
 				content: 'Frimaire dérive du latin "frigus" et de l\'ancien français "frimas" (gelée blanche, givre).',
@@ -617,12 +621,12 @@ export default [
 		description: "Période de la neige",
 		notes: [
 			{
-				title: 'Choix technique - Association de mot',
-				content: 'Contrairement aux autres mois qui mettent en avant les végétaux, le mois de nivôse est consacré aux matériaux terrestres.',
+				title: 'Histoire - Rejet populaire',
+				content: `Peu de citoyens ont voulu utiliser le calendrier au quotidien. En effet, il n'a pas su remplacer les nombreux jours fériés de la religion catholique. De plus, les décades n'octroyaient qu'un seul jour de repos pour neuf jours travaillés, contre un pour sept pour les semaines.`,
 			},
 			{
-				title: 'Histoire - Rejet populaire',
-				content: 'Le calendrier républicain n\'ayant pas su remplacer les nombreux jours fériés de la religion catholique et les décades n\'octroyant qu\'un seul jour de repos pour neuf jours travaillés, contre un pour sept pour les semaines, peu voulaient l\'utiliser au quotidien.',
+				title: 'Choix technique - Association de mot',
+				content: 'Contrairement aux autres mois qui mettent en avant les végétaux, le mois de nivôse est consacré aux matériaux terrestres.',
 			},
 			{
 				title: 'Suffix saisonnier',
@@ -630,7 +634,7 @@ export default [
 			},
 			{
 				title: 'Étymologie',
-				content: 'Du latin nix, nivis « neige ».',
+				content: 'Du latin nix, nivis "neige".',
 			},
 		],
 		days: [
@@ -835,7 +839,13 @@ export default [
 			},
 			{
 				title: 'Anecdote - Fleurs du mal',
-				content: "Le nom de ce mois a été rendu célèbre par le sonnet de Charles Baudelaire, Spleen I, des Fleurs du mal.",
+				content: `Le nom de ce mois a été rendu célèbre par le sonnet de Charles Baudelaire, Spleen I, des Fleurs du mal.
+<br/><br/>
+<blockquote>Pluviôse, irrité contre la ville entière,<br/>
+De son urne à grands flots verse un froid ténébreux<br/>
+Aux pâles habitants du voisin cimetière<br/>
+Et la mortalité sur les faubourgs brumeux.</blockquote>
+				`,
 			},
 		],
 		days: [
@@ -1028,9 +1038,14 @@ export default [
 		notes: [
 			{
 				title: 'Histoire - Abolition',
-				content: `<blockquote>Victorieuse dans son ambition de remodeler les structures de l’espace, par le système métrique, la Révolution a échoué dans sa tentative à l’égard de celle du temps.</blockquote>
+				content: `<blockquote>Victorieuse dans son ambition de remodeler les structures de l’espace par le système métrique, la Révolution a échoué dans sa tentative à l’égard de celle du temps.</blockquote>
+				<cite>
+					Michel Vovelle - professeur émérite à l’université de Paris I<br/>
+					Tuteur de maîtrise d'Histoire d'Anne Laudet (1986)
+				</cite>
 <br/>
-Napoléon Bonaparte abroge le calendrier républicain par le sénatus-consulte du <time>22 fructidor an XIII</time> (9 septembre 1805), avec effet au <time>1er janvier 1806</time> (11 nivôse an XIV). Le calendrier grégorien fut rétabli, marquant la fin d'une expérience de 12 ans, 2 mois et 27 jours.
+<br/>
+Napoléon Bonaparte abroge le calendrier républicain par le sénatus-consulte du <time>22 fructidor an XIII</time> (9 septembre 1805), avec effet au <time>1ᵉʳ janvier 1806</time> (11 nivôse an XIV). Le calendrier grégorien fut rétabli, marquant la fin d'une expérience de 12 ans, 2 mois et 27 jours.
 <br/>
 <br/>
 L'une des raisons était de faciliter les relations diplomatiques, car bien qu'originalement calqué sur la nature, l’universalisation de ce calendrier posait problèmes sous d’autres climats et d’autres latitudes.
@@ -1229,7 +1244,20 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		notes: [
 			{
 				title: 'Anecdote - Germinal de Zola',
-				content: 'Émile Zola choisit "Germinal" comme titre de son célèbre roman sur les mineurs (1885). Correspondant au retour du printemps et de l\'espoir, le mois de germinal incarne aussi les idées portées durant la Révolution française et présentes dans le livre, justice sociale, lutte politique, émancipation et dignité humaine.',
+				content: 'Émile Zola choisit "Germinal" comme titre de son célèbre roman sur les mineurs (1885). Correspondant au retour du printemps et de l\'espoir, le mois de germinal incarne aussi les idées portées durant la Révolution française et présentes dans le livre : justice sociale, lutte politique, émancipation et dignité humaine.',
+			},
+			{
+				title: 'Histoire - Fabre d\'Églantine',
+				content: `Acteur, dramaturge, poète et homme politique français. Il est l'auteur de la dénomination des mois et des jours utilisés dans le calendrier républicain.
+				<br /><br />
+				C'est dans ce calendrier que l'on retrouve pour la première fois l'idée d'une journée destinée à célébrer les travailleurs. Des années plus tard, l'églantine sera d'ailleurs choisie comme symbole du 1er mai, en partie en son honneur, avant d'être plus tard remplacée par le muguet.
+
+<br /><br />
+On le connaît aussi pour chanson suivante :
+<blockquote>Il pleut, il pleut bergère<br />
+Rentre tes blancs moutons...</blockquote>
+</ul>
+`,
 			},
 			{
 				title: 'Suffix saisonnier',
@@ -1424,6 +1452,10 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		image: "floreal.jpg",
 		description: "Période de l'épanouissement des fleurs",
 		notes: [
+			{
+				title: 'Histoire - Illustration mensuelle',
+				content: `Les illustrations présentes dans ce calendrier ont été réalisées en collaboration par Louis Lafitte et Salvatore Tresca. Lafitte ayant produit les dessins et Tresca les ayant gravés.`
+			},
 			{
 				title: 'Choix technique - Association de mot',
 				content: `Dans le calendrier républicain, les jours sont principalement consacrés aux végétaux. Mais une structure se répète chaque mois :
@@ -1622,8 +1654,19 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		description: "Période des récoltes des prairies",
 		notes: [
 			{
+				title: 'Histoire - Fête de l\'Être suprême',
+				content: `Le <time>20 prairial An II</time> (8 juin 1794), Robespierre organise la "Fête de l'Être suprême", culte civique destiné à remplacer le culte catholique dont les repères manquaient au peuple français.
+				<br /><br />
+				Ordonnancée par Jacques-Louis David, la fête connut un immense succès, puisque entre 300 000 et 400 000 personnes y participèrent à Paris sur le Champs de Mars.
+				<br /><br />
+				<figure>
+					<img src="/pictures/fête_de_l'Etre_suprême.jpg" width="450px"/>
+					<figcaption>La fête de l'Être Suprême, au Champ-de-Mars, par Pierre-Antoine Demachy (1794)</figcaption>
+				</figure>`
+			},
+			{
 				title: 'Histoire - Contexte',
-				content: 'Les paysans constituaient 85% de la population française en 1793, ce qui explique l\'omniprésence des références agricoles dans le calendrier.'
+				content: `Les paysans constituaient 85% de la population française en 1793, ce qui explique l'omniprésence des références agricoles dans le calendrier.`
 			},
 		],
 		days: [
@@ -1815,12 +1858,14 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		description: "Période des moissons",
 		notes: [
 			{
-				title: 'Suffix saisonnier',
-				content: 'Les mois d\'été terminent en -idor, du grec ancien δῶρον (dôron), « don »',
+				title: 'Histoire - Fête de la Fédération',
+				content: `Cette fête a eu lieu le <time>14 juillet 1790</time>, quelques années avant l'instauration du calendrier républicain. L'objectif était de fédérer tous les Français autour d'une monarchie constitutionnelle.
+				<br /><br />
+				Elle est doublement importante puisqu'elle est à l'origine du choix du <time>14 juillet</time> comme fête nationale française. La fête de la Fédération célébrait le premier anniversaire de la prise de la Bastille, par extension, notre fête nationale depuis la 3ème République aussi. `
 			},
 			{
-				title: 'Étymologie',
-				content: "Du latin messis, « moisson »",
+				title: 'Suffix saisonnier',
+				content: 'Les mois d\'été terminent en -idor, du grec ancien δῶρον (dôron), "don"',
 			},
 		],
 		days: [
@@ -2012,8 +2057,12 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		description: "Période des chaleurs",
 		notes: [
 			{
+				title: 'Histoire - Fin de la "Terreur" et de chute Robespierre',
+				content: `Le <time>9 thermidor an II</time> (27 juillet 1794) marque la chute de Robespierre. Après une journée d'affrontements politiques à la Convention, Robespierre, Saint-Just et leurs partisans furent arrêtés. Le lendemain, Robespierre et certains de ses partisans furent guillotinés sans procès. Cette journée mit fin à la Terreur et ouvrit la "Réaction thermidorienne", période de modération relative précédant le coup d'état de Napoléon Bonaparte.`,
+			},
+			{
 				title: 'À propos de thermidor',
-				content: 'Dans le texte primitif, le second mois de l\'été s\'appelait non pas « thermidor » (du grec Thermê chaleur), mais « fervidor », du mot Fervidus, signifiant brûlant en latin.',
+				content: 'Dans le texte primitif, le second mois de l\'été s\'appelait non pas "thermidor" du grec Thermê chaleur, mais "fervidor", du mot Fervidus, signifiant brûlant en latin.',
 			},
 		],
 		days: [
@@ -2204,6 +2253,20 @@ Cette décision visait aussi à améliorer les relations avec l'Église catholiq
 		image: "fructidor.jpg",
 		description: "Période des fruits",
 		notes: [
+			{
+				title: 'Histoire - An 79 de la République',
+				content: `Le calendrier républicain est repris pour quelques semaines en 1871, lors de la <time>Commune de Paris</time>. Les révolutionnaires de la Commune avaient à cœur de faire appliquer certaines valeurs sociales et démocratiques de la constitution de l'An II (1793). Celle-ci n'avait jamais été appliquée, les députés ayant été dépassés par la guerre civile provoquée par la "Terreur".`
+			},
+			{
+				title: 'Histoire - Charles-Gilbert Romme',
+				content: `Romme, homme politique français, fut le rapporteur de la commission qui décida de l'élaboration du calendrier républicain. Pour ce faire, il s'entoura de l'Académie des sciences. Dans cette commission comme dans celle des poids et mesures, les idéologues et les politiques entourent et encadrent les scientifiques, les buts des uns étant très différents de ceux des autres.
+<br /><br />
+<blockquote>
+Le temps ouvre un nouveau livre à l'histoire ; et dans sa marche nouvelle, majestueuse et simple comme l'égalité, il doit graver d'un burin neuf les annales de la France régénérée[43]. […] Le 21 septembre, le dernier de la monarchie et qui doit être le dernier de l'ère vulgaire, les représentants du peuple français réunis en Convention nationale ont ouvert leur session et ont prononcé l'abolition de la royauté.
+</blockquote>
+<cite>Charles-Gilbert Romme lorsqu'il présenta le calendrier à la Convention.</cite>
+				`,
+			}
 		],
 		days: [
 			{
