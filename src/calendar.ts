@@ -1660,7 +1660,7 @@ Rentre tes blancs moutons...</blockquote>
 				Ordonnancée par Jacques-Louis David, la fête connut un immense succès, puisque entre 300 000 et 400 000 personnes y participèrent à Paris sur le Champs de Mars.
 				<br /><br />
 				<figure>
-					<img src="/pictures/fête_de_l'Etre_suprême.jpg" width="450px"/>
+					<img src="pictures/fête_de_l'Etre_suprême.jpg" width="450px"/>
 					<figcaption>La fête de l'Être Suprême, au Champ-de-Mars, par Pierre-Antoine Demachy (1794)</figcaption>
 				</figure>`
 			},
