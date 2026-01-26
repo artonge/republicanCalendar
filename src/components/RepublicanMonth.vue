@@ -22,11 +22,5 @@ defineProps<{
 	* {
 		border-color: rgba($color: #919191, $alpha: 0.6) !important;
 	}
-
-	&:nth-child(odd) {
-		.information {
-			flex-direction: row-reverse;
-		}
-	}
 }
 </style>
