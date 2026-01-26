@@ -9,6 +9,12 @@ Le site web est imprimable tel quel depuis le menu d'impression de votre navigat
 
 Les propositions de modifications sont les bienvenues. Il n'y a pas de critères d'acceptabilité pour le moment, mais toutes modifications améliorant la lecture, les informations ou la qualité du code devraient être acceptées sans problème :).
 
+Liste incomplètes de choses que j'aimerais ajouter :
 
+- Permettre la sélection de l'année.
+- Ajouter une horloge républicaine sur la version en ligne du document.
+- Améliorer la distinction des semaines. La solution actuelle n'est pas assez lisible.
+- Améliorer l'accessibilité du site.
+- Utiliser la nouvelle API JS `Temporal`.
 
 Le code source est sous licence GPL-V3. Le site web généré est sous licence CC BY-NC-SA 4.0.
