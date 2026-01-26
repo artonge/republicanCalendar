@@ -17,8 +17,6 @@ if (!isSextile(republicanYear)) {
 
 <template>
 	<div id="calendar">
-		<div id="couverture" class="A4-page no-print">
-		</div>
 		<div id="couverture" class="A4-page">
 			<figure>
 				<img :src="`pictures/couverture.png`">
@@ -31,7 +29,6 @@ if (!isSextile(republicanYear)) {
 		</div>
 
 		<RepublicanMonth v-for="(month, index) in calendar"
-			:class="{ [`month--${index}`]: true }"
 			:key="month.name"
 			:month="month"
 			:calendar="calendar"
@@ -71,12 +68,6 @@ if (!isSextile(republicanYear)) {
 		flex-grow: 1;
 		height: 0;
 		margin-bottom: 8px;
-	}
-}
-
-#calendar {
-	.month--12 :deep(.information__image) {
-		width: 50%;
 	}
 }
 </style>

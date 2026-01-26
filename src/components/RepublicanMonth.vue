@@ -11,16 +11,6 @@ defineProps<{
 </script>
 
 <template>
-	<div class="month">
-		<RepublicanMonthInformation :month="month" />
-		<RepublicanMonthGrid :month="month" :calendar="calendar" :republicanYear="republicanYear" />
-	</div>
+	<RepublicanMonthInformation :month="month" />
+	<RepublicanMonthGrid :month="month" :calendar="calendar" :republicanYear="republicanYear" />
 </template>
-
-<style lang="scss" scoped>
-.month {
-	* {
-		border-color: rgba($color: #919191, $alpha: 0.6) !important;
-	}
-}
-</style>

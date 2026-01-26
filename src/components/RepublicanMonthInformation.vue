@@ -8,7 +8,8 @@ defineProps<{
 
 <template>
 	<div class="information A4-page">
-		<figure class="information__image">
+		<figure class="information__image"
+			:class="{ ['complementary-month']: month.days.length <= 6 }">
 			<img :src="`pictures/${month.image}`" v-if="month.image !== undefined" :alt="month.image_description">
 			<figcaption v-if="month.image_description !== undefined" v-html="month.image_description" />
 		</figure>
@@ -43,6 +44,11 @@ defineProps<{
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+
+		// Custom style for complementary month image.
+		&.complementary-month {
+			width: 50%;
+		}
 
 		img {
 			max-height: 100%;

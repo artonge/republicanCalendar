@@ -31,13 +31,18 @@ body {
 	// For development, to display page borders
 	// border: 1px solid grey;
 
+	// Set border color for all table and elements inside the page.
+	* {
+		border-color: rgba($color: #919191, $alpha: 0.6) !important;
+	}
+
 	padding: 0.7cm;
 
-	&:nth-child(odd) {
+	&:nth-child(even) {
 		padding-top: 2cm;
 	}
 
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		padding-bottom: 2cm;
 	}
 
@@ -54,7 +59,7 @@ body {
 		border-radius: 100%;
 	}
 
-	&:nth-child(odd)::before {
+	&:nth-child(even)::before {
 		top: 30px;
 		bottom: auto;
 	}
