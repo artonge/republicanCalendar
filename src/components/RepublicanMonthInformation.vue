@@ -59,6 +59,7 @@ defineProps<{
 	&__right-container {
 		display: flex;
 		flex-direction: column;
+		gap: 24px;
 	}
 
 	&__header {
@@ -86,6 +87,7 @@ defineProps<{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		gap: 24px;
 
 		&__note {
 			border: 1px solid;
