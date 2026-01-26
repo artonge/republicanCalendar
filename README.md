@@ -5,7 +5,7 @@
 
 Ce dépôt contient les sources d'un site web permettant de générer un calendrier républicain pour l'année en cours.
 
-Le site web est imprimable tel quel depuis le menu d'impression de votre navigateur. Ce menu est accessible via `Fichier -> Imprimer`, ou via le raccourci clavier suivant : `CTRL+P`. Il est aussi possible, à partir de ce menu, d'enregistrer le document au format PDF afin de le retravailler.
+Le site web est imprimable tel quel depuis le menu d'impression de votre navigateur. Ce menu est accessible via `Fichier -> Imprimer`, ou via le raccourci clavier suivant : `CTRL+P`. Il est aussi possible, à partir de ce menu, d'enregistrer le document au format PDF afin de le retravailler. Pour environ 20€, un imprimeur de quartier sera en mesure de vous imprimer le calendrier sur des feuilles A3 reliées afin de former un carnet.
 
 Les propositions de modifications sont les bienvenues. Il n'y a pas de critères d'acceptabilité pour le moment, mais toutes modifications améliorant la lecture, les informations ou la qualité du code devraient être acceptées sans problème :).
 
