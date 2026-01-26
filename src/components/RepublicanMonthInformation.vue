@@ -13,10 +13,18 @@ defineProps<{
 			<figcaption v-if="month.image_description !== undefined" v-html="month.image_description" />
 		</figure>
 
-		<div class="information__notes" v-if="month.notes.length > 0">
-			<div class="information__notes__note" v-for="(note, index) in month.notes" :key="index">
-				<span class="information__notes__note__title">{{ note.title }}</span>
-				<p class="information__notes__note__content" v-html="note.content"></p>
+		<div class="information__right-container">
+			<div class="information__header">
+				<div class="information__header__name">{{ month.name }}</div>
+				<div class="information__header__description" v-if="month.description !== undefined">
+					{{ month.description }}
+				</div>
+			</div>
+			<div class="information__notes" v-if="month.notes.length > 0">
+				<div class="information__notes__note" v-for="(note, index) in month.notes" :key="index">
+					<span class="information__notes__note__title">{{ note.title }}</span>
+					<p class="information__notes__note__content" v-html="note.content"></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -39,6 +47,31 @@ defineProps<{
 		img {
 			max-height: 100%;
 			border-radius: 8px;
+		}
+	}
+
+	&__right-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+
+		&__name {
+			padding-top: 16px;
+			font-weight: bold;
+			font-size: 45px;
+			line-height: 24px;
+		}
+
+		&__description {
+			font-style: italic;
+			font-size: 16px;
+			line-height: 16px;
 		}
 	}
 

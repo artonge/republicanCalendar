@@ -11,12 +11,6 @@ defineProps<{
 
 <template>
 	<div class="grid A4-page">
-		<div class="grid__title">
-			<div class="grid__title__name">{{ month.name }}</div>
-			<div class="grid__title__description" v-if="month.description !== undefined">
-				{{ month.description }}
-			</div>
-		</div>
 		<div class="grid__header">
 			<div class="grid__header__day-name">Primidi</div>
 			<div class="grid__header__day-name">Duodi</div>
@@ -51,25 +45,6 @@ defineProps<{
 
 <style lang="scss" scoped>
 .grid {
-	&__title {
-		margin-bottom: 16px;
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-
-		&__name {
-			font-weight: bold;
-			font-size: 24px;
-			line-height: 24px;
-		}
-
-		&__description {
-			font-style: italic;
-			font-size: 16px;
-			line-height: 16px;
-		}
-	}
-
 	&__header {
 		display: flex;
 
