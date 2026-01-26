@@ -28,7 +28,7 @@ if (!isSextile(republicanYear)) {
 			<i>du 22 septembre {{ currentGregorianYear }} au 21 septembre {{ currentGregorianYear + 1 }}</i>
 		</div>
 
-		<RepublicanMonth v-for="(month, index) in calendar"
+		<RepublicanMonth v-for="(month) in calendar"
 			:key="month.name"
 			:month="month"
 			:calendar="calendar"
@@ -40,6 +40,9 @@ if (!isSextile(republicanYear)) {
 				<figcaption>Charles Thévenin, La fête de la Fédération (1792)</figcaption>
 			</figure>
 		</div>
+	</div>
+	<div id="licence" class="no-print">
+		This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 	</div>
 </template>
 
@@ -69,5 +72,10 @@ if (!isSextile(republicanYear)) {
 		height: 0;
 		margin-bottom: 8px;
 	}
+}
+
+#licence {
+	text-align: center;
+	padding: 50px;
 }
 </style>

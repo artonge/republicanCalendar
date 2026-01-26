@@ -79,3 +79,9 @@ figure {
 		font-style: italic;
 	}
 }
+
+.no-print {
+	@media print {
+		display: none !important;
+	}
+}
