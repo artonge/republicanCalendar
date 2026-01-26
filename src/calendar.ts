@@ -1454,7 +1454,7 @@ Rentre tes blancs moutons...</blockquote>
 		notes: [
 			{
 				title: 'Histoire - Illustration mensuelle',
-				content: `Les illustrations présentes dans ce calendrier ont été réalisées en collaboration par Louis Lafitte et Salvatore Tresca. Lafitte ayant produit les dessins et Tresca les ayant gravés.`
+				content: `Les illustrations présentes dans ce calendrier ont été réalisées en 1797 dans le cadre d'une collaboration entre Louis Lafitte et Salvatore Tresca. Lafitte ayant produit les dessins et Tresca les ayant gravés.`
 			},
 			{
 				title: 'Choix technique - Association de mot',

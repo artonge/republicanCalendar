@@ -70,7 +70,7 @@ const isOddGregorianMonth = gregorianDate.getMonth() % 2 === 1
 	}
 
 	&--is-odd-gregorian-month {
-		background-color: rgba($color: #919191, $alpha: 0.07);
+		background-color: rgba($color: #919191, $alpha: 0.1);
 	}
 }
 </style>

@@ -22,7 +22,7 @@ if (!isSextile(republicanYear)) {
 		<div id="couverture" class="A4-page">
 			<figure>
 				<img :src="`pictures/couverture.png`">
-				<figcaption>Philibert-Louis Debucourt, Allégorie du calendrier républicain</figcaption>
+				<figcaption>Philibert-Louis Debucourt, Allégorie du calendrier républicain (1794 – 1795)</figcaption>
 			</figure>
 
 			<h1>Calendrier Républicain</h1>
@@ -40,7 +40,7 @@ if (!isSextile(republicanYear)) {
 		<div id="back-page" class="A4-page">
 			<figure>
 				<img :src="`pictures/fete_federation.jpg`" alt="">
-				<figcaption>Charles Thévenin, La fête de la Fédération</figcaption>
+				<figcaption>Charles Thévenin, La fête de la Fédération (1792)</figcaption>
 			</figure>
 		</div>
 	</div>
