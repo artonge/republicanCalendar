@@ -31,11 +31,6 @@ body {
 	// For development, to display page borders
 	// border: 1px solid grey;
 
-	// Set border color for all table and elements inside the page.
-	* {
-		border-color: rgba($color: #919191, $alpha: 0.6) !important;
-	}
-
 	padding: 0.7cm;
 
 	&:nth-child(even) {
@@ -62,6 +57,11 @@ body {
 	&:nth-child(even)::before {
 		top: 30px;
 		bottom: auto;
+	}
+
+	// Set border color for all table and elements inside the page.
+	* {
+		border-color: rgba($color: #919191, $alpha: 0.6) !important;
 	}
 }
 
